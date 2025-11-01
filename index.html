@@ -59,6 +59,43 @@
       color: #a8a8a8;
       font-size: 0.9rem;
     }
+    /* Moderator form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 80%;
+      padding: 0.7rem;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: #f0f0f0;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #00ffc6;
+    }
+    button {
+      padding: 0.8rem 1.5rem;
+      background: #00ffc6;
+      color: #1b1f3b;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #00d4aa;
+    }
   </style>
 </head>
 <body>
@@ -91,22 +128,30 @@
     <p>
       Contribute your Raspberry Pi, ideas, or feedback to help shape the future of OpenPiVault.
     </p>
-    <a class="button" href="https://github.com/Technicianguy10321/OpenPiVault.github.io/issues" target="_blank">Get Involved</a>
+    <a class="button" href="https://github.com/Technicianguy10321/OpenPiVault.github.io/issues" target="_blank">
+      Get Involved (GitHub Issues)
+    </a>
   </section>
 
   <section>
     <h2>We're Hiring Moderators!</h2>
     <p>
-      OpenPiVault is expanding our global community and looking for dedicated volunteers to help moderate and manage the shared server spaces.
+      OpenPiVault is expanding our global community and looking for dedicated volunteers to help moderate and manage shared server spaces.
     </p>
     <ul style="text-align:left; display:inline-block;">
       <li>👥 Monitor shared drives for fair use and safety</li>
       <li>🛡️ Enforce community rules and privacy standards</li>
       <li>💬 Assist users with setup, Samba, and OpenMediaVault configuration</li>
-      <li>🌍 Represent OpenPiVault in online discussions and help new members</li>
+      <li>🌍 Represent OpenPiVault and help new members</li>
     </ul>
-    <p>If you’re passionate about open-source tech and community-driven projects, we’d love to have you on board.</p>
-    <a class="button" href="mailto:thetechnicianbuilder@gmail.com?subject=Moderator%20Application">Apply Now</a>
+
+    <h3 style="color:#00ffc6;">Apply Now</h3>
+    <form action="mailto:thetechnicianbuilder@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Tell us about yourself, your experience, and why you want to moderate." required></textarea>
+      <button type="submit">Send Application</button>
+    </form>
   </section>
 
   <section>
